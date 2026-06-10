@@ -424,20 +424,9 @@ const EXPERIENCE = [
     period: "May 2026 – Present",
     icon: Brain,
     points: [
-      "Completed intensive AI/ML fellowship",
-      "Worked on AI for social good projects",
-      "Collaborated in multidisciplinary teams",
-    ],
-  },
-  {
-    role: "Soar With Mentor Program Mentee",
-    org: "Dell Technologies",
-    period: "Oct 2025 – Mar 2026",
-    icon: Briefcase,
-    points: [
-      "Earned GenAI Foundations credential",
-      "Worked with mentors and industry professionals",
-      "Served as volunteer judge for STEM projects",
+      "Completing intensive AI/ML bootcamp with mentorship from industry experts",
+      "Working on an AI for social good project in a multidisciplinary team",
+      "Developing an AI/ML model addressing a real-world social good challenge",
     ],
   },
   {
@@ -446,9 +435,31 @@ const EXPERIENCE = [
     period: "Oct 2025 – Present",
     icon: Users,
     points: [
-      "Led national initiatives across Canadian universities",
-      "Supported women in technology",
-      "Organized large-scale events and programs",
+      "Led national initiatives across Canadian universities, impacting 1,000+ students",
+      "Promoted inclusion and support for women pursuing computing careers",
+      "Organized and facilitated national-level events across 10+ universities",
+    ],
+  },
+  {
+    role: "Vice President Finance",
+    org: "Undergraduate Association of Computing Science",
+    period: "Oct 2025 – Present",
+    icon: Briefcase,
+    points: [
+      "Managing real-to-real finances for a 1,200+ member student association",
+      "Administering hosting and web-service accounts including DigitalOcean and NameCheap",
+      "Ensuring timely payments and secure credential management",
+    ],
+  },
+  {
+    role: "Soar With Mentor Program Mentee",
+    org: "Dell Technologies",
+    period: "Oct 2025 – Mar 2026",
+    icon: Briefcase,
+    points: [
+      "Earned Proven Professional GenAI Foundations Credential as Engagement Prize Winner",
+      "Built professional and leadership skills with mentors and industry peers",
+      "Served as Volunteer Judge encouraging problem-solving and teamwork among young women in STEM",
     ],
   },
 ];
@@ -498,7 +509,7 @@ const PROJECTS = [
   {
     title: "Android Event Management Application",
     tech: ["Java", "Android Studio", "Firebase"],
-    desc: "Built a lottery-based event management application with waiting lists, invitation workflows, organizer tools, and real-time updates.",
+    desc: "Lottery-based event management app with real-time registration, waitlists, invitation workflows, organizer dashboard, and CSV exports. Built in a 6-person team following Figma mockups.",
     github: "https://github.com/CMPUT301W26cipher/cipher-events",
     demo: "https://github.com/CMPUT301W26cipher/cipher-events",
     icon: Smartphone,
@@ -506,7 +517,7 @@ const PROJECTS = [
   {
     title: "TaskZen",
     tech: ["Python", "Streamlit", "SQLite", "Pandas", "Plotly"],
-    desc: "A productivity-focused task management platform with analytics dashboards and task tracking capabilities.",
+    desc: "Full-stack task organizer with analytics dashboards, task tracking, and data visualization. Built collaboratively at HackED 2025.",
     github: "https://github.com/Pragati-Puri/HackED_2025",
     demo: "https://github.com/Pragati-Puri/HackED_2025",
     icon: BarChart3,
@@ -632,10 +643,26 @@ function Leadership() {
 
 /* ---------- Skills ---------- */
 const SKILL_GROUPS = [
-  { title: "Languages", icon: Code2, items: ["Python", "Java", "SQL", "JavaScript", "C", "HTML", "CSS"] },
-  { title: "Data Science & AI", icon: Brain, items: ["Pandas", "NumPy", "Matplotlib", "Plotly"] },
-  { title: "Development", icon: Smartphone, items: ["Android Studio", "Firebase", "Streamlit"] },
-  { title: "Tools", icon: Wrench, items: ["Git", "GitHub", "Version Control"] },
+  {
+    title: "Languages",
+    icon: Code2,
+    items: ["Python", "SQL", "SQLite", "PostgreSQL", "JavaScript", "HTML/CSS"],
+  },
+  {
+    title: "Data Science & AI",
+    icon: Brain,
+    items: ["Pandas", "NumPy", "Matplotlib", "Plotly"],
+  },
+  {
+    title: "Development",
+    icon: Smartphone,
+    items: ["Android Studio", "Firebase", "Streamlit"],
+  },
+  {
+    title: "Tools",
+    icon: Wrench,
+    items: ["Git", "GitHub", "GitHub Actions", "VS Code"],
+  },
 ];
 
 function Skills() {
@@ -671,12 +698,12 @@ function Skills() {
 
 /* ---------- Journey ---------- */
 const JOURNEY = [
-  { year: "2025", title: "TaskZen", desc: "Built productivity platform during HackED 2025." },
-  { year: "2025", title: "Dell Soar With Mentor Program", desc: "Earned GenAI Foundations credential." },
-  { year: "2025", title: "Vice President Finance", desc: "Stewarded budget and operations." },
-  { year: "2025", title: "Director, Women in Tech Council", desc: "Leading national initiatives for women in tech." },
-  { year: "2026", title: "Android Application", desc: "Shipping event management platform for CMPUT 301." },
-  { year: "2026", title: "Amii Machine Learning Fellowship", desc: "Joining the Amii ML Fellows cohort." },
+  { year: "2025", title: "TaskZen", desc: "Built a full-stack task organizer at HackED 2025." },
+  { year: "2025", title: "Dell Soar With Mentor Program", desc: "Earned Proven Professional GenAI Foundations Credential as an Engagement Prize Winner." },
+  { year: "2025", title: "Vice President Finance", desc: "Managing finances and operations for UofA's 1,200+ member Computing Science student association." },
+  { year: "2025", title: "Director, Women in Tech Council", desc: "Leading national initiatives for women in tech across 10+ Canadian universities." },
+  { year: "2026", title: "Android Event Management App", desc: "Shipped a lottery-based event management platform built in a 6-person team." },
+  { year: "2026", title: "Amii Machine Learning Fellowship", desc: "Joining the Amii ML Fellows cohort for intensive AI bootcamp and social good project." },
 ];
 
 function Journey() {
