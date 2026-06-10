@@ -22,7 +22,7 @@ function Linkedin(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-import heroImg from "@/assets/hero-illustration.png";
+import heroImg from "@/assets/hero.jpg";
 import portraitImg from "@/assets/portrait.jpg";
 
 const NAV = [
@@ -314,10 +314,10 @@ function Hero() {
             <div className="absolute inset-6 rounded-[40%] bg-[var(--gradient-primary)] opacity-20 blur-3xl" aria-hidden />
             <img
               src={heroImg}
-              alt="Illustration of a software developer working with AI tools"
+              alt="Pragati Puri"
               width={1024}
               height={1024}
-              className="relative z-10 h-full w-full object-contain"
+              className="relative z-10 h-full w-full rounded-[40%] object-cover"
             />
 
             {/* Floating icons */}
