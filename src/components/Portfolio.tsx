@@ -275,7 +275,11 @@ function Hero() {
             <a href="#projects" className="inline-flex items-center gap-2 rounded-xl bg-foreground px-5 py-3 text-sm font-semibold text-background shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.03]">
               View Projects <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="#resume" className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-primary-soft">
+            <a
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
+              download="Pragati_Puri_Resume.pdf"
+              className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-primary-soft"
+            >
               <Download className="h-4 w-4" /> Download Resume
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-foreground hover:text-primary">
@@ -737,7 +741,8 @@ function Resume() {
               </p>
               <div className="mt-2 flex flex-wrap gap-3">
                 <a
-                  href="#"
+                  href={`${import.meta.env.BASE_URL}resume.pdf`}
+                  download="Pragati_Puri_Resume.pdf"
                   className="inline-flex items-center gap-2 rounded-xl bg-foreground px-5 py-3 text-sm font-semibold text-background shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.03]"
                 >
                   <Download className="h-4 w-4" /> Download Resume
