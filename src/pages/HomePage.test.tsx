@@ -8,7 +8,9 @@ const motionCalls = vi.hoisted(
   () =>
     [] as Array<{
       animate?: unknown;
-      transition?: { repeat?: unknown };
+      initial?: unknown;
+      transition?: unknown;
+      variants?: unknown;
       whileHover?: unknown;
       whileInView?: unknown;
     }>,
@@ -40,7 +42,7 @@ vi.mock("framer-motion", async (importOriginal) => {
             ...domProps
           } = props;
 
-          motionCalls.push({ animate, transition, whileHover, whileInView });
+          motionCalls.push({ animate, initial, transition, variants, whileHover, whileInView });
 
           return createElement(property, { ...domProps, ref }, children);
         });
@@ -72,7 +74,13 @@ it("uses only static motion configuration when reduced motion is requested", () 
   render(<HomePage />);
 
   expect(screen.getByAltText("Pragati Puri")).toBeInTheDocument();
-  expect(motionCalls.some((call) => call.animate === false)).toBe(true);
-  expect(motionCalls.some((call) => call.transition?.repeat === Infinity)).toBe(false);
+  expect(motionCalls).not.toHaveLength(0);
+  expect(
+    motionCalls.every((call) =>
+      [call.animate, call.initial, call.variants, call.transition].every(
+        (value) => value === false || value === undefined,
+      ),
+    ),
+  ).toBe(true);
   expect(motionCalls.some((call) => call.whileHover || call.whileInView)).toBe(false);
 });
