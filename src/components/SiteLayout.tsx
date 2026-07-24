@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 const navigation = [
   { label: "Home", to: "/" },
@@ -8,6 +8,19 @@ const navigation = [
   { label: "Experience", to: "/experience" },
   { label: "About", to: "/about" },
 ];
+
+const pageMeta = {
+  "/": [
+    "Pragati Puri - Software Developer",
+    "Portfolio of Pragati Puri, AI software developer and Computing Science student.",
+  ],
+  "/projects": ["Projects | Pragati Puri", "Selected software and AI projects by Pragati Puri."],
+  "/experience": [
+    "Experience | Pragati Puri",
+    "Professional experience and leadership by Pragati Puri.",
+  ],
+  "/about": ["About | Pragati Puri", "Education, skills, and background for Pragati Puri."],
+} as const;
 
 function navLinkClassName(isActive: boolean) {
   return `rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
@@ -19,6 +32,15 @@ function navLinkClassName(isActive: boolean) {
 
 export function SiteLayout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const [title, description] = pageMeta[pathname as keyof typeof pageMeta] ?? pageMeta["/"];
+    document.title = title;
+
+    const descriptionMeta = document.querySelector('meta[name="description"]');
+    descriptionMeta?.setAttribute("content", description);
+  }, [pathname]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
