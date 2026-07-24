@@ -53,7 +53,9 @@ export function HomePage() {
               "radial-gradient(circle at 85% 20%, oklch(0.88 0.08 240 / 0.45), transparent 32%), radial-gradient(circle at 15% 85%, oklch(0.9 0.06 260 / 0.4), transparent 36%)",
             backgroundSize: "160% 160%",
           }}
-          transition={{ duration: 16, ease: "easeInOut", repeat: Infinity }}
+          transition={
+            reducedMotion ? undefined : { duration: 16, ease: "easeInOut", repeat: Infinity }
+          }
         />
         <div className="relative mx-auto grid min-h-[calc(100vh-8.5rem)] max-w-6xl items-center gap-12 px-4 py-20 md:grid-cols-[1.2fr_0.8fr]">
           <motion.div
@@ -103,7 +105,9 @@ export function HomePage() {
           <motion.div
             animate={reducedMotion ? false : { y: [0, -8, 0] }}
             className="relative mx-auto w-full max-w-sm"
-            transition={{ duration: 6, ease: "easeInOut", repeat: Infinity }}
+            transition={
+              reducedMotion ? undefined : { duration: 6, ease: "easeInOut", repeat: Infinity }
+            }
           >
             <div
               aria-hidden

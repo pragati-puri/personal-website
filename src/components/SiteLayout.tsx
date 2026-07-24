@@ -38,8 +38,11 @@ export function SiteLayout() {
     const [title, description] = pageMeta[pathname as keyof typeof pageMeta] ?? pageMeta["/"];
     document.title = title;
 
-    const descriptionMeta = document.querySelector('meta[name="description"]');
-    descriptionMeta?.setAttribute("content", description);
+    const descriptionMeta =
+      document.querySelector<HTMLMetaElement>('meta[name="description"]') ??
+      document.head.appendChild(document.createElement("meta"));
+    descriptionMeta.name = "description";
+    descriptionMeta.content = description;
   }, [pathname]);
 
   return (
