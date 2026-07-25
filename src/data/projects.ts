@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "Uses a modular multi-agent service architecture with interchangeable model backends.",
     ],
     links: [{ label: "View on GitHub", href: "https://github.com/jassica181/vitalbyte" }],
-    featured: false,
+    featured: true,
   },
   {
     slug: "cipher-events",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
       { label: "View on Devpost", href: "https://devpost.com/software/task-zen" },
       { label: "View on GitHub", href: "https://github.com/Pragati-Puri/HackED_2025" },
     ],
-    featured: true,
+    featured: false,
   },
   {
     slug: "delulu-core",

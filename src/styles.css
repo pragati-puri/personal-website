@@ -51,7 +51,7 @@
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(1 0 0);
+  --background: oklch(0.985 0.012 250 / 0.9);
   --foreground: oklch(0.18 0.03 256);
   --surface: oklch(0.985 0.005 250);
   --surface-elevated: oklch(1 0 0);
@@ -85,6 +85,10 @@
   }
   body {
     background-color: var(--color-background);
+    background-image:
+      radial-gradient(circle at 92% 8%, oklch(0.75 0.11 255 / 0.18), transparent 30%),
+      radial-gradient(circle at 8% 92%, oklch(0.8 0.08 300 / 0.16), transparent 34%);
+    background-attachment: fixed;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;

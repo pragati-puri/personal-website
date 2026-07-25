@@ -5,8 +5,21 @@ export function AboutPage() {
   return (
     <main className="mx-auto min-h-[calc(100vh-8.5rem)] max-w-6xl px-4 py-20" id="main-content">
       <h1 className="text-4xl font-bold tracking-tight md:text-5xl">About</h1>
-      <p className="mt-4 text-muted-foreground">
-        Computing Science student focused on AI, software development, and thoughtful technology.
+      <p className="mt-6 max-w-4xl text-lg leading-8 text-muted-foreground">
+        I&apos;m a Computer Science Student at the University of Alberta. I am an emerging AI
+        software developer interested in building thoughtful, expandable technology that solves real
+        problems. Through my various experiences, I&apos;ve contributed to full-stack AI
+        applications using TypeScript and Next.js, while my project work has strengthened my
+        experience in mobile development, data-driven systems, and collaborative software delivery.
+        Beyond development, I lead initiatives that support women in technology across Canada and
+        bring a people-first perspective to the products I build.
+      </p>
+      <p className="mt-6 inline-flex rounded-xl border border-primary/30 bg-primary-soft px-5 py-3 text-base font-semibold text-primary shadow-[var(--shadow-soft)]">
+        Open to internships across Canada.
+      </p>
+      <p className="mt-6 max-w-3xl text-muted-foreground">
+        Fun fact: I love to coffee chat with people and know more about their journey. If you are
+        someone who wants to have a quick chat, please do not hesitate to reach out to me ;)
       </p>
 
       <section

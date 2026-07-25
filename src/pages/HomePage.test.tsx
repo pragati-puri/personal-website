@@ -84,3 +84,13 @@ it("uses only static motion configuration when reduced motion is requested", () 
   ).toBe(true);
   expect(motionCalls.some((call) => call.whileHover || call.whileInView)).toBe(false);
 });
+
+it("features VitalByte and Cipher Events", () => {
+  vi.mocked(useReducedMotion).mockReturnValue(true);
+
+  render(<HomePage />);
+
+  expect(screen.getByRole("heading", { level: 2, name: "VitalByte" })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { level: 2, name: "Cipher Events" })).toBeInTheDocument();
+  expect(screen.queryByRole("heading", { level: 2, name: "TaskZen" })).not.toBeInTheDocument();
+});
