@@ -83,7 +83,10 @@ export const projects: Project[] = [
       "Built by a three-person team during a 24-hour hackathon.",
       "Delivers a custom-styled chatbot experience for a Gen Z audience.",
     ],
-    links: [{ label: "View on Devpost", href: "https://devpost.com/software/delulu-core" }],
+    links: [
+      { label: "View on Devpost", href: "https://devpost.com/software/delulu-core" },
+      { label: "View on GitHub", href: "https://github.com/Debugging-Divas/Project" },
+    ],
     featured: false,
   },
 ];

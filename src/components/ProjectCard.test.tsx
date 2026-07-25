@@ -20,3 +20,15 @@ it("does not display a project date", () => {
 
   expect(screen.queryByText(/2025/)).not.toBeInTheDocument();
 });
+
+it("renders the Delulu Core GitHub action", () => {
+  const deluluCore = projects.find((project) => project.slug === "delulu-core");
+
+  expect(deluluCore).toBeDefined();
+  render(<ProjectCard project={deluluCore!} />);
+
+  expect(screen.getByRole("link", { name: /view on github/i })).toHaveAttribute(
+    "href",
+    "https://github.com/Debugging-Divas/Project",
+  );
+});
